@@ -24,19 +24,19 @@ const Hero = () => {
           </p>
           
           <div className="hero-buttons">
+            <button className="btn btn-primary" onClick={() => scrollToSection('contact')}>
+              Get In Touch
+            </button>
             <a 
               href="/resume/Satvik_DB_Resume.pdf" 
               download="Satvik_DB_Resume.pdf"
-              className="btn btn-primary"
+              className="btn btn-secondary"
             >
               <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" style={{ marginRight: '8px' }}>
                 <path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/>
               </svg>
               Download Resume
             </a>
-            <button className="btn btn-secondary" onClick={() => scrollToSection('contact')}>
-              Get In Touch
-            </button>
           </div>
         </div>
       </div>
