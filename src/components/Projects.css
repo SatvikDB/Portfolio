@@ -1,0 +1,33 @@
+.projects {
+  padding: 8rem 3rem;
+  background: #0a0a0a;
+}
+
+.projects-container {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.projects-intro {
+  font-size: 1.1rem;
+  color: #666;
+  margin-bottom: 5rem;
+  max-width: 700px;
+  line-height: 1.8;
+  font-weight: 300;
+}
+
+.projects-grid {
+  display: grid;
+  gap: 6rem;
+}
+
+@media (max-width: 768px) {
+  .projects {
+    padding: 5rem 1.5rem;
+  }
+
+  .projects-grid {
+    gap: 4rem;
+  }
+}

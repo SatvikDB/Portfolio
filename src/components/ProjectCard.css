@@ -1,0 +1,463 @@
+.project-card {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+  padding: 3rem 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  position: relative;
+}
+
+.project-card::before {
+  content: '';
+  position: absolute;
+  left: -100%;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(138, 43, 226, 0.1), transparent);
+  transition: left 0.5s ease;
+}
+
+.project-card:hover::before {
+  left: 100%;
+}
+
+.project-card:last-child {
+  border-bottom: none;
+}
+
+.project-card:nth-child(even) {
+  direction: rtl;
+}
+
+.project-card:nth-child(even) > * {
+  direction: ltr;
+}
+
+.project-image {
+  width: 100%;
+  height: 400px;
+  background: linear-gradient(135deg, #1a1a1a 0%, #0f0f0f 100%);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(138, 43, 226, 0.2);
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 10px 40px rgba(138, 43, 226, 0.2);
+  transition: all 0.4s ease;
+}
+
+.project-image::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(45deg, transparent, rgba(138, 43, 226, 0.1), transparent);
+  transform: rotate(45deg);
+  transition: all 0.6s ease;
+}
+
+.project-card:hover .project-image::before {
+  transform: rotate(45deg) translate(50%, 50%);
+}
+
+.project-card:hover .project-image {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 60px rgba(138, 43, 226, 0.4);
+  border-color: rgba(138, 43, 226, 0.5);
+}
+
+.project-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+  position: relative;
+  z-index: 1;
+}
+
+.project-card:hover .project-image img {
+  transform: scale(1.08);
+}
+
+.project-icon {
+  font-size: 4rem;
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.project-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.project-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.project-title {
+  font-size: 2rem;
+  color: #ffffff;
+  font-weight: 600;
+  margin: 0;
+  letter-spacing: -0.01em;
+  background: linear-gradient(135deg, #ffffff 0%, #8a2be2 100%);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  transition: background-position 0.3s ease;
+}
+
+.project-card:hover .project-title {
+  background-position: 100% center;
+}
+
+.project-links {
+  display: flex;
+  gap: 1rem;
+}
+
+.project-link {
+  color: #666;
+  transition: all 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.project-link::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: rgba(138, 43, 226, 0.2);
+  transform: scale(0);
+  transition: transform 0.3s ease;
+}
+
+.project-link:hover::after {
+  transform: scale(1.5);
+}
+
+.project-link:hover {
+  color: #8a2be2;
+}
+
+.project-description {
+  color: #999;
+  line-height: 1.8;
+  font-size: 1.05rem;
+  font-weight: 300;
+}
+
+.project-features {
+  display: none;
+}
+
+.project-tech {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+}
+
+.tech-badge {
+  color: #999;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  font-weight: 400;
+  border: 1px solid rgba(138, 43, 226, 0.3);
+  background: rgba(138, 43, 226, 0.05);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.tech-badge::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(138, 43, 226, 0.2), transparent);
+  transition: left 0.5s ease;
+}
+
+.tech-badge:hover::before {
+  left: 100%;
+}
+
+.tech-badge:hover {
+  border-color: rgba(138, 43, 226, 0.6);
+  color: #ffffff;
+  transform: translateY(-2px);
+}
+
+.learn-more {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #8a2be2;
+  font-size: 0.95rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.3s;
+  position: relative;
+}
+
+.learn-more::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #8a2be2, #4169e1);
+  transition: width 0.3s ease;
+}
+
+.learn-more:hover::after {
+  width: 100%;
+}
+
+.learn-more:hover {
+  gap: 1rem;
+  color: #ffffff;
+}
+
+@media (max-width: 968px) {
+  .project-card {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    padding: 2rem 0;
+  }
+
+  .project-card:nth-child(even) {
+    direction: ltr;
+  }
+
+  .project-image {
+    height: 300px;
+  }
+
+  .project-title {
+    font-size: 1.6rem;
+  }
+
+  .project-description {
+    font-size: 1rem;
+  }
+}
+
+.project-description {
+  color: #b0b0b0;
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+  font-size: 1rem;
+}
+
+.project-features {
+  margin-bottom: 1.5rem;
+  flex: 1;
+}
+
+.project-features h4 {
+  color: #00ff88;
+  font-size: 1rem;
+  margin-bottom: 0.8rem;
+  font-weight: 600;
+}
+
+.project-features ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.project-features li {
+  color: #b0b0b0;
+  padding: 0.4rem 0;
+  padding-left: 1.5rem;
+  position: relative;
+  font-size: 0.95rem;
+}
+
+.project-features li::before {
+  content: '▹';
+  position: absolute;
+  left: 0;
+  color: #00ff88;
+  font-size: 1.2rem;
+}
+
+.project-tech {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin-top: auto;
+}
+
+.tech-badge {
+  background: rgba(0, 255, 136, 0.1);
+  color: #00ff88;
+  padding: 0.4rem 0.9rem;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  border: 1px solid rgba(0, 255, 136, 0.2);
+  font-weight: 500;
+}
+
+@media (max-width: 768px) {
+  .project-card {
+    padding: 1.5rem;
+  }
+
+  .project-title {
+    font-size: 1.3rem;
+  }
+
+  .project-description {
+    font-size: 0.95rem;
+  }
+
+  .project-features li {
+    font-size: 0.9rem;
+  }
+
+  .tech-badge {
+    font-size: 0.8rem;
+    padding: 0.35rem 0.75rem;
+  }
+}
+
+/* Mobile phone mockup styles */
+.project-image.mobile-frame {
+  background: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 100%);
+  padding: 2rem;
+  justify-content: center;
+  display: flex;
+  gap: 2rem;
+  height: auto;
+  min-height: 500px;
+}
+
+.phone-mockup {
+  width: 280px;
+  background: #1a1a1a;
+  border-radius: 35px;
+  padding: 10px;
+  box-shadow: 
+    0 0 0 2px #333,
+    0 0 0 4px #1a1a1a,
+    0 20px 60px rgba(138, 43, 226, 0.3),
+    inset 0 0 20px rgba(0, 0, 0, 0.5);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: fit-content;
+}
+
+.phone-screen {
+  width: 100%;
+  background: #000;
+  border-radius: 28px;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.phone-notch {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 22px;
+  background: #000;
+  border-radius: 0 0 15px 15px;
+  z-index: 10;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.phone-screen img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: contain;
+}
+
+.mobile-frame .phone-mockup {
+  animation: phoneFloat 4s ease-in-out infinite;
+}
+
+.mobile-frame .phone-mockup:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.mobile-frame .phone-mockup:nth-child(2) {
+  animation-delay: 0.5s;
+}
+
+@keyframes phoneFloat {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+}
+
+.phone-mockup::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: linear-gradient(135deg, rgba(138, 43, 226, 0.3), rgba(65, 105, 225, 0.3));
+  border-radius: 37px;
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.project-card:hover .phone-mockup::before {
+  opacity: 1;
+}
+
+@media (max-width: 968px) {
+  .project-image.mobile-frame {
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 1.5rem;
+    min-height: auto;
+  }
+  
+  .phone-mockup {
+    width: 240px;
+    margin: 0 auto;
+  }
+}
+
