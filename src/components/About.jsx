@@ -8,17 +8,16 @@ const About = () => {
         <div className="about-content">
           <div className="about-text">
             <p className="about-description">
-              A self-taught AI/ML developer, functioning in the field for 2+ years now. 
-              I make meaningful and impactful digital products that create an equilibrium 
-              between user needs and technological innovation.
+              I'm an Information Science and Engineering student passionate about software engineering, 
+              backend development, and AI-driven applications. My experience includes developing Flutter 
+              applications, full-stack web solutions, and intelligent systems using modern technologies 
+              like React, Node.js, MongoDB, TensorFlow, and Python.
             </p>
             <p className="about-description">
-              Software engineering student with strong foundations in Java and Flutter, and a good working knowledge of 
-              full-stack web development. Experienced in building real-world academic and user-centric applications. 
-              Interested in backend systems, problem-solving, scalable software design, and fundamentals of 
-              Cryptography and Network Security.
+              I enjoy solving complex problems, learning emerging technologies, and building scalable 
+              products that bridge innovation with real-world needs.
             </p>
-            
+
             <div className="education">
               <h3 className="subsection-title">Education</h3>
               <div className="education-card">

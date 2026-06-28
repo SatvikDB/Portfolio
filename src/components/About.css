@@ -140,3 +140,109 @@
     padding: 0.5rem 1rem;
   }
 }
+
+/* ── Work Experience ── */
+.work-experience {
+  margin-top: 3rem;
+}
+
+.experience-card {
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+  padding: 2rem;
+  transition: border-color 0.3s;
+}
+
+.experience-card:hover {
+  border-color: rgba(138, 43, 226, 0.25);
+}
+
+.experience-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.5rem;
+}
+
+.experience-logo-wrap {
+  flex-shrink: 0;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  overflow: hidden;
+  background: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.08);
+}
+
+.company-logo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.experience-info {
+  flex: 1;
+}
+
+.experience-info h4 {
+  font-size: 1.1rem;
+  color: #ffffff;
+  margin-bottom: 0.35rem;
+  font-weight: 500;
+}
+
+.company-name {
+  color: #8a2be2;
+  font-size: 0.95rem;
+  font-weight: 400;
+  margin-bottom: 0.35rem;
+}
+
+.experience-project {
+  color: #666;
+  font-size: 0.9rem;
+  font-weight: 300;
+}
+
+.experience-meta {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.5rem;
+  flex-shrink: 0;
+}
+
+.exp-type {
+  font-size: 0.8rem;
+  color: #8a2be2;
+  background: rgba(138, 43, 226, 0.1);
+  border: 1px solid rgba(138, 43, 226, 0.25);
+  border-radius: 4px;
+  padding: 0.2rem 0.6rem;
+  font-weight: 400;
+  letter-spacing: 0.02em;
+}
+
+/* highlight span used inline */
+.highlight {
+  color: #a855f7;
+  font-weight: 400;
+}
+
+@media (max-width: 768px) {
+  .experience-header {
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  .experience-meta {
+    align-items: flex-start;
+    width: 100%;
+    flex-direction: row;
+    gap: 0.75rem;
+  }
+}

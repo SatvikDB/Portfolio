@@ -21,9 +21,9 @@ const Contact = () => {
             <p>+91 9008297218</p>
           </a>
 
-          <a href="https://linkedin.com/in/satvik-db-326b51289" target="_blank" rel="noopener noreferrer" className="contact-card">
+          <a href="https://www.linkedin.com/in/satvikdb/" target="_blank" rel="noopener noreferrer" className="contact-card">
             <h3>LinkedIn</h3>
-            <p>satvik-db-326b51289</p>
+            <p>satvikdb</p>
           </a>
 
           <a href="https://github.com/SatvikDB" target="_blank" rel="noopener noreferrer" className="contact-card">

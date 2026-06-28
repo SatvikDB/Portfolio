@@ -65,6 +65,26 @@
   box-shadow: 0 6px 20px rgba(138, 43, 226, 0.5);
 }
 
+/* StarBorder resume button overrides */
+.nav-resume-star {
+  text-decoration: none;
+}
+
+.nav-resume-star .inner-content {
+  font-size: 0.95rem;
+  font-weight: 500;
+  padding: 0.5rem 1.4rem;
+  border-radius: 20px;
+  border-color: rgba(138, 43, 226, 0.35);
+  background: rgba(138, 43, 226, 0.12);
+  color: #ffffff;
+  transition: background 0.3s ease;
+}
+
+.nav-resume-star:hover .inner-content {
+  background: rgba(138, 43, 226, 0.25);
+}
+
 .nav-toggle {
   display: none;
   flex-direction: column;

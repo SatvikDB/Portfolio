@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import StarBorder from './StarBorder';
 import './Navbar.css';
 
 const Navbar = () => {
@@ -21,14 +22,19 @@ const Navbar = () => {
           <a onClick={() => scrollToSection('hero')} className="nav-link">Home</a>
           <a onClick={() => scrollToSection('about')} className="nav-link">About</a>
           <a onClick={() => scrollToSection('projects')} className="nav-link">Work</a>
+          <a onClick={() => scrollToSection('projects-list')} className="nav-link">Projects</a>
           <a onClick={() => scrollToSection('contact')} className="nav-link">Contact</a>
-          <a 
-            href="/resume/Satvik_DB_Resume.pdf" 
-            download="Satvik_DB_Resume.pdf"
-            className="nav-link nav-resume-btn"
-          >
-            Resume
-          </a>
+          <StarBorder
+              as="a"
+              href="/resume/Satvik_DB_Resume.pdf"
+              download="Satvik_DB_Resume.pdf"
+              color="#8a2be2"
+              speed="4s"
+              thickness={2}
+              className="nav-resume-star"
+            >
+              Resume
+            </StarBorder>
         </div>
 
         <div className="nav-toggle" onClick={() => setIsOpen(!isOpen)}>
