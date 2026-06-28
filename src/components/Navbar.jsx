@@ -28,6 +28,8 @@ const Navbar = () => {
               as="a"
               href="/SatvikDB_Resume.pdf"
               download="SatvikDB_Resume.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
               color="#8a2be2"
               speed="4s"
               thickness={2}
