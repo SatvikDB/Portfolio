@@ -26,8 +26,8 @@ const Navbar = () => {
           <a onClick={() => scrollToSection('contact')} className="nav-link">Contact</a>
           <StarBorder
               as="a"
-              href="/resume/Satvik_DB_Resume.pdf"
-              download="Satvik_DB_Resume.pdf"
+              href="/SatvikDB_Resume.pdf"
+              download="SatvikDB_Resume.pdf"
               color="#8a2be2"
               speed="4s"
               thickness={2}
