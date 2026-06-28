@@ -1,6 +1,17 @@
+import { useEffect } from 'react';
 import './Contact.css';
 
 const Contact = () => {
+  useEffect(() => {
+    const script = document.createElement('script');
+    script.src = 'https://static-bundles.visme.co/forms/vismeforms-embed.js';
+    script.async = true;
+    document.body.appendChild(script);
+    return () => {
+      document.body.removeChild(script);
+    };
+  }, []);
+
   return (
     <section id="contact" className="contact">
       <div className="contact-container">
@@ -30,6 +41,19 @@ const Contact = () => {
             <h3>GitHub</h3>
             <p>SatvikDB</p>
           </a>
+        </div>
+
+        {/* Visme contact form */}
+        <div className="contact-form-wrap">
+          <div
+            className="visme_d"
+            data-title="Business Prospect Contact Form"
+            data-url="17evv6rp-business-prospect-contact-form"
+            data-domain="forms"
+            data-full-page="false"
+            data-min-height="500px"
+            data-form-id="187830"
+          />
         </div>
 
         <div className="contact-location">

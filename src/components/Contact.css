@@ -77,3 +77,12 @@
     padding: 1.5rem;
   }
 }
+
+/* Visme embedded form */
+.contact-form-wrap {
+  margin-top: 3rem;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+  overflow: hidden;
+  min-height: 500px;
+}
