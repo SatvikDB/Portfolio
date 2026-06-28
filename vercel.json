@@ -4,7 +4,26 @@
   "devCommand": "npm run dev",
   "installCommand": "npm install",
   "framework": "vite",
+  "headers": [
+    {
+      "source": "/SatvikDB_Resume.pdf",
+      "headers": [
+        {
+          "key": "Content-Type",
+          "value": "application/pdf"
+        },
+        {
+          "key": "Content-Disposition",
+          "value": "attachment; filename=\"SatvikDB_Resume.pdf\""
+        }
+      ]
+    }
+  ],
   "rewrites": [
+    {
+      "source": "/SatvikDB_Resume.pdf",
+      "destination": "/SatvikDB_Resume.pdf"
+    },
     {
       "source": "/(.*)",
       "destination": "/index.html"
