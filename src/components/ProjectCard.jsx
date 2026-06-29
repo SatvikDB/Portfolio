@@ -64,6 +64,11 @@ const ProjectCard = ({ project }) => {
         <a href={project.github} target="_blank" rel="noopener noreferrer" className="learn-more">
           LEARN MORE →
         </a>
+        {project.live && (
+          <a href={project.live} target="_blank" rel="noopener noreferrer" className="learn-more live-link">
+            {project.liveLabel || 'VISIT SITE'} ↗
+          </a>
+        )}
       </div>
     </div>
   );

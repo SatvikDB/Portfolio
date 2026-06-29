@@ -461,3 +461,17 @@
   }
 }
 
+
+/* Live site link — sits beside Learn More */
+.live-link {
+  color: #a855f7;
+  margin-left: 1.5rem;
+}
+
+.live-link::after {
+  background: linear-gradient(90deg, #a855f7, #8a2be2);
+}
+
+.live-link:hover {
+  color: #ffffff;
+}

@@ -26,6 +26,18 @@ const Projects = () => {
       icon: '📚'
     },
     {
+      title: 'VaultTag',
+      subtitle: 'Web3 Asset Verification Platform',
+      description: 'VaultTag is a blockchain-powered authentication platform that leverages NFT minting on Polygon and NFC-enabled verification to establish secure digital ownership of physical products. By simply scanning an NFC tag, users can instantly verify authenticity, ownership, and product details, ensuring secure delivery and preventing counterfeiting.',
+      tech: ['Web3.js', 'Polygon', 'NFT', 'NFC', 'MongoDB'],
+      github: 'https://github.com/SatvikDB/VaultTag',
+      live: 'https://vaulttag-1.onrender.com/',
+      liveLabel: 'VISIT VAULTTAG',
+      image: '/images/VaultTag.png',
+      isMobile: false,
+      icon: '🔐'
+    },
+    {
       title: 'KrishiRaksha',
       subtitle: 'Plant Disease Detection App',
       description: 'Flutter-based mobile application to assist farmers with crop health identification and agricultural guidance. Uses ML-powered image recognition with Firebase integration for real-time data and cloud storage.',
