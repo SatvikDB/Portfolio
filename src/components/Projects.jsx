@@ -1,7 +1,9 @@
+import { useState } from 'react';
 import ProjectCard from './ProjectCard';
 import './Projects.css';
 
 const Projects = () => {
+  const [certOpen, setCertOpen] = useState(false);
   const projects = [
     {
       title: 'AEGIS',
@@ -71,6 +73,12 @@ const Projects = () => {
                 >
                   Visit Million Huts ↗
                 </a>
+                <button
+                  className="experience-link-btn cert-btn"
+                  onClick={() => setCertOpen(true)}
+                >
+                  Certificate 🎓
+                </button>
               </div>
               <div className="experience-meta">
                 <span className="duration">Feb 2026 – Apr 2026</span>
@@ -89,6 +97,33 @@ const Projects = () => {
         </div>
 
       </div>
+
+      {/* Certificate modal */}
+      {certOpen && (
+        <div className="cert-overlay" onClick={() => setCertOpen(false)}>
+          <div className="cert-modal" onClick={(e) => e.stopPropagation()}>
+            <div className="cert-modal-header">
+              <span>Internship Certificate — Zetacoding Innovative Solutions</span>
+              <button className="cert-close" onClick={() => setCertOpen(false)}>✕</button>
+            </div>
+            <iframe
+              src="/zetacoding-certificate.pdf"
+              title="Internship Certificate"
+              className="cert-frame"
+            />
+            <div className="cert-modal-footer">
+              <a
+                href="/zetacoding-certificate.pdf"
+                download="SatvikDB_Zetacoding_Certificate.pdf"
+                className="experience-link-btn"
+              >
+                Download ↓
+              </a>
+            </div>
+          </div>
+        </div>
+      )}
+
     </section>
   );
 };

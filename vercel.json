@@ -25,6 +25,10 @@
       "destination": "/SatvikDB_Resume.pdf"
     },
     {
+      "source": "/zetacoding-certificate.pdf",
+      "destination": "/zetacoding-certificate.pdf"
+    },
+    {
       "source": "/(.*)",
       "destination": "/index.html"
     }

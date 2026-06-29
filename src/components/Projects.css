@@ -166,3 +166,103 @@
     gap: 0.75rem;
   }
 }
+
+/* ── Button row ── */
+.experience-info .experience-link-btn,
+.experience-info .cert-btn {
+  margin-top: 1rem;
+  margin-right: 0.75rem;
+}
+
+/* Certificate button variant */
+.cert-btn {
+  cursor: pointer;
+  font-family: inherit;
+  display: inline-block;
+  padding: 0.45rem 1.1rem;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: #a855f7;
+  border: 1px solid rgba(168, 85, 247, 0.35);
+  border-radius: 6px;
+  text-decoration: none;
+  background: rgba(168, 85, 247, 0.07);
+  transition: all 0.25s ease;
+}
+
+.cert-btn:hover {
+  background: rgba(168, 85, 247, 0.18);
+  border-color: rgba(168, 85, 247, 0.6);
+  color: #c084fc;
+}
+
+/* ── Certificate modal ── */
+.cert-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(6px);
+  z-index: 2000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+}
+
+.cert-modal {
+  background: #111;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  width: 100%;
+  max-width: 860px;
+  max-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.cert-modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.5rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+  font-size: 0.9rem;
+  color: #999;
+}
+
+.cert-close {
+  background: none;
+  border: none;
+  color: #666;
+  font-size: 1.1rem;
+  cursor: pointer;
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+  transition: color 0.2s;
+}
+
+.cert-close:hover {
+  color: #ffffff;
+}
+
+.cert-frame {
+  flex: 1;
+  width: 100%;
+  min-height: 600px;
+  border: none;
+  background: #fff;
+}
+
+.cert-modal-footer {
+  padding: 1rem 1.5rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.07);
+  display: flex;
+  justify-content: flex-end;
+}
+
+@media (max-width: 768px) {
+  .cert-frame {
+    min-height: 400px;
+  }
+}
