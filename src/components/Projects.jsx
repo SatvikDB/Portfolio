@@ -26,7 +26,7 @@ const Projects = () => {
       icon: '📚'
     },
     {
-      title: 'KrishiKatalyst',
+      title: 'KrishiRaksha',
       subtitle: 'Plant Disease Detection App',
       description: 'Flutter-based mobile application to assist farmers with crop health identification and agricultural guidance. Uses ML-powered image recognition with Firebase integration for real-time data and cloud storage.',
       tech: ['Flutter', 'Firebase', 'TensorFlow Lite', 'Dart'],
