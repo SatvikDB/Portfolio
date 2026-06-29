@@ -30,7 +30,7 @@ const Projects = () => {
       subtitle: 'Plant Disease Detection App',
       description: 'Flutter-based mobile application to assist farmers with crop health identification and agricultural guidance. Uses ML-powered image recognition with Firebase integration for real-time data and cloud storage.',
       tech: ['Flutter', 'Firebase', 'TensorFlow Lite', 'Dart'],
-      github: 'https://github.com/SatvikDB',
+      github: 'https://github.com/SatvikDB/KrishiRaksha_Flutter_App',
       images: ['/images/krishikatalyst1.jpeg', '/images/krishikatalyst2.jpeg'],
       isMobile: true,
       icon: '🌱'
